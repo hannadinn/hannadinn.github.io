@@ -1,16 +1,51 @@
-/* Add some basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'LastKingQuest';
+  src: url('LastKingQuest.ttf');
+}
+
+@font-face {
+  font-family: 'Champgne';
+  src: url('Champgne.ttf');
+}
+
+@font-face {
+  font-family: 'SendFlowers';
+  src: url('SendFlowers-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'FleurDeLeah';
+  src: url('FleurDeLeah-Regular.ttf');
+}
+
 h1 {
     text-align: center;
   }
+
+  .bg-image {
+    position: relative;
+    background-image: url("stage1/image3.jpg");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .blur {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    height: 100vh;
+  }
   
   #image-container {
-    /* display: flex; */
-    max-width: 600px;
-    
-    /* flex-flow: row wrap; */
-    /* justify-content: center;
-    background: green;
-     */
+    width: 100%;
   margin: 0 auto;
   }
   
@@ -19,16 +54,7 @@ h1 {
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
      grid-template-rows: 1fr 1fr 1fr;
-    /* width: 100%; */
-    /* flex: 0 1 20%; */
-    /* display: none; */
   }
-  
-  /* .stage.visible {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-  } */
   
   .image {
     cursor: pointer;
@@ -60,7 +86,28 @@ h1 {
     border-color: blue;
   }
 
-  #result {
-    display: none;
+  .header {
+    font-family: 'SendFlowers';
+    color: pink;
+    font-style: italic;
+    font-size: 200;
+  }
+
+  .result-row {
+    display: flex;
+    
+  }
+
+  .result {
+    position: relative;
+    flex-grow: 1;
+  flex-basis: 0;
+  flex-shrink: 0;
+    flex-direction: column;
+    display: block;
+    text-align: center;
+    height: calc(100vw / 6 * 1.5);
+    font-size: 100px;
+    visibility: hidden;
   }
   
