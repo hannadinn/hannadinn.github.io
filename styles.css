@@ -4,27 +4,39 @@ h1 {
   }
   
   #image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    /* display: flex; */
+    max-width: 600px;
+    
+    /* flex-flow: row wrap; */
+    /* justify-content: center;
+    background: green;
+     */
+  margin: 0 auto;
   }
   
   .stage {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr 1fr;
+    /* width: 100%; */
+    /* flex: 0 1 20%; */
     /* display: none; */
   }
   
-  .stage.visible {
+  /* .stage.visible {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-  }
+  } */
   
   .image {
     cursor: pointer;
     width: 100%;
+    max-width: 100%;
     height: auto;
     border: 2px solid gray;
-    padding: 5px;
+    /* padding: 5px; */
     display: block;
   width: 180px;
   height: 180px;
@@ -34,8 +46,6 @@ h1 {
   -ms-border-radius: 180px;
   -o-border-radius: 180px;
   border-radius: 180px;
-  
-
   position: relative; 
   margin: 0px auto;
   text-align: center;
