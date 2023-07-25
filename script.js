@@ -14,7 +14,6 @@ window.onload = function() {
         
         var filePath = this.src;
         if (currentStage === 1 && filePath.includes("3.jpg")) {
-          result.style.display = "block";
           showAnswerByColumn(2);
           showAnswerByColumn(3);
           triggerChangeImage(currentStage);
