@@ -7,6 +7,9 @@ window.onload = function() {
     var images = document.getElementsByClassName('image');
     var result = document.getElementById('result');
     var bgId = "bgimage";
+
+    var vid = document.getElementById("video");
+    vid.addEventListener("play", () => onPlay());
   
     // Attach click event handlers to all images
     for (var i = 0; i < images.length; i++) {
@@ -78,6 +81,10 @@ window.onload = function() {
       var columnId = "result" + num;
       var answerElement = document.getElementById(columnId);
       answerElement.style.visibility = "visible";
+    }
+
+    function onPlay() {
+      document.getElementById("bgimage").style.display = "none";
     }
   };
   
