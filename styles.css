@@ -4,34 +4,14 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'LastKingQuest';
-  src: url('LastKingQuest.ttf');
-}
-
-@font-face {
-  font-family: 'Champgne';
-  src: url('Champgne.ttf');
-}
-
-@font-face {
-  font-family: 'SendFlowers';
-  src: url('SendFlowers-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'FleurDeLeah';
-  src: url('FleurDeLeah-Regular.ttf');
-}
-
-h1 {
-    text-align: center;
+  h1 {
+      text-align: center;
   }
 
   .bg-image {
     position: relative;
     background-image: url("stage1/image3.jpg");
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,20 +20,24 @@ h1 {
 
   .blur {
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
     height: 100vh;
+    backdrop-filter: blur(8px);
+  }
+
+  .unblurTransition {
+    transition-duration: 4s;
   }
   
   #image-container {
     width: 100%;
-  margin: 0 auto;
+    margin: 0 auto;
   }
   
   .stage {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
-     grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
   
   .image {
@@ -62,35 +46,31 @@ h1 {
     max-width: 100%;
     height: auto;
     border: 2px solid gray;
-    /* padding: 5px; */
     display: block;
-  width: 180px;
-  height: 180px;
-  overflow: hidden;
-  -webkit-border-radius: 180px;
-  -moz-border-radius: 180px;
-  -ms-border-radius: 180px;
-  -o-border-radius: 180px;
-  border-radius: 180px;
-  position: relative; 
-  margin: 0px auto;
-  text-align: center;
-  margin-bottom: 10px;
-  border: 3px solid #FFF;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3),inset 0px 3px 8px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3),inset 0px 3px 8px rgba(0,0,0,0.3);
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3),inset 0px 3px 8px rgba(0, 0, 0, 0.3);
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    -webkit-border-radius: 180px;
+    -moz-border-radius: 180px;
+    -ms-border-radius: 180px;
+    -o-border-radius: 180px;
+    border-radius: 180px;
+    position: relative; 
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 3px solid #FFF;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3),inset 0px 3px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3),inset 0px 3px 8px rgba(0,0,0,0.3);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3),inset 0px 3px 8px rgba(0, 0, 0, 0.3);
   }
   
   .selected {
     border-color: blue;
   }
 
-  .header {
-    font-family: 'SendFlowers';
-    color: pink;
-    font-style: italic;
-    font-size: 200;
+  .title {
+    font-size: 100px;
   }
 
   .result-row {
@@ -101,8 +81,8 @@ h1 {
   .result {
     position: relative;
     flex-grow: 1;
-  flex-basis: 0;
-  flex-shrink: 0;
+    flex-basis: 0;
+    flex-shrink: 0;
     flex-direction: column;
     display: block;
     text-align: center;
