@@ -27,6 +27,7 @@
 
   .unblurTransition {
     transition-duration: 4s;
+    -webkit-transition-duration: 4s;
   }
   
   #image-container {
